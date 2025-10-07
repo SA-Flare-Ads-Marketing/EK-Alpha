@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - EK-Alpha Solutions</title>
+    
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+    /* Updated Team Section Styles */
+.team-goals-section {
+    padding: 80px 0;
+    background-color: #0a0a0a;
+}
+
+.leadership-section {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.leadership-card {
+    background: linear-gradient(135deg, #1a1a33, #0f0f1c);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.leadership-card:hover {
+    transform: translateY(-5px);
+}
+
+.leader-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 20px;
+    border: 3px solid #e60000;
+}
+
+.leader-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.leader-info h3 {
+    color: #e60000;
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+.leader-name {
+    color: #ffffff;
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.leader-desc {
+    color: #a0a0b8;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.team-section {
+    margin-top: 40px;
+}
+
+.team-title {
+    color: #ffffff;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.team-title::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #e60000, #007bff);
+    margin: 15px auto;
+    border-radius: 2px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.team-member {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+}
+
+.member-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 15px;
+    border: 2px solid #007bff;
+}
+
+.member-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h4 {
+    color: #ffffff;
+    font-size: 1.3em;
+    margin-bottom: 5px;
+}
+
+.member-role {
+    color: #007bff;
+    font-size: 1em;
+    margin-bottom: 0;
+}
+
+.future-goals {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    padding: 30px;
+    margin-top: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.goals-title {
+    color: #ffffff;
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.goal-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.goal-list li {
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.goal-list i {
+    font-size: 1.2em;
+}
+
+.red-icon {
+    color: #e60000;
+}
+
+.blue-icon {
+    color: blue;
+}
+
+/* Responsive adjustments for team section */
+@media (max-width: 768px) {
+    .leadership-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .leadership-card {
+        max-width: 100%;
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* Enhanced Service Cards for Portfolio Section */
+.service-card {
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid transparent;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border-color: #e60000;
+}
+
+.service-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-image {
+    transform: scale(1.05);
+}
+
+.service-content {
+    padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card h4 {
+    font-size: 1.4em;
+    color: #ffffff;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.service-card p {
+    color: #a0a0b8;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.service-card .learn-more-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    margin-top: auto;
+}
+
+.service-card .learn-more-link i {
+    font-size: 0.8em;
+    margin-left: 5px;
+    transition: margin-left 0.3s ease;
+}
+
+.service-card .learn-more-link:hover {
+    color: #e60000;
+}
+
+.service-card .learn-more-link:hover i {
+    margin-left: 10px;
+}
+
+/* Updated service grid for 8 cards */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+</style>
+
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="loader-content">
+            <div class="loader-logo">EK-ALPHA SOLUTIONS</div>
+            <div class="loader-spinner"></div>
+            <div class="loader-text">Loading Excellence...</div>
+        </div>
+    </div>
+    <nav class="navbar">
+         <div class="nav-title-header">
+        <h1 class="nav-main-title">EK-ALPHA SOLUTIONS</h1>
+    </div>
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html"><img src="img/unnamed (28).png" class="logo" alt="EK-Alpha Solutions Logo"></a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                  <li class="nav-dropdown">
+                    <a href="services.html" class="nav-link">Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="truck-dispatch.html">Truck Dispatch</a></li>
+                        <li><a href="medicare.html">Medicare</a></li>
+                        <li><a href="home&autoinsurance.html">Home&Auto Insurance</a></li>
+                        <li><a href="Web Development.html">Web Development</a></li>
+                        <li><a href="social media marketing.html">Social Media Marketing</a></li>
+                    </ul>
+                </li>
+                <li><a href="carrier-setup.html" class="nav-link" id="active">Carrier Setup</a></li>
+                <li><a href="about.html" class="nav-link">About US</a></li>
+                <li><a href="contact.html" class="nav-link">Contact US</a></li>
+                <a href="tel:+107833464378" id="tel"><button class="but">Call Us: +10 783 346 4378</button></a>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT START -->
+    <main id="about-content">
+        <section class="hero-section">
+            <div class="container">
+                <h2 class="section-title text-center">About EK-Alpha Solutions</h2>
+                <p class="hero-subtitle text-center">Your Trusted Partner in Administrative, Digital, and Logistics Solutions.</p>
+            </div>
+        </section>
+
+        <!-- Page 1: Introduction & Vision -->
+        <section class="content-section" id="introduction" style="padding-top: 800px;">
+            <div class="container">
+                <div class="card-large">
+                    <h3 class="card-title">Our Foundation</h3>
+                    <p>At **EK-Alpha Solutions**, we believe in the power of trust, innovation, and dedication. Founded with a simple yet strong mission: **"to be the most trusted administrative and logistics partner,"** we have grown into a multi-service company that supports individuals, families, and businesses with reliable solutions across different industries.</p>
+                    <p>From **truck dispatching** to **Medicare assistance**, **home & auto insurance**, **full-stack development**, and **social media marketing**, EK-Alpha Solutions brings diverse expertise together under one roof, serving clients worldwide.</p>
+                </div>
+
+                <div class="grid-2-col my-5">
+                    <div class="card-medium accent-border-red">
+                        <h4 class="card-subtitle"><i class="fas fa-eye"></i> Our Vision</h4>
+                        <p>To become a global leader in administrative, digital, and logistics solutions, known for **professionalism, trust, and long-term partnerships.**</p>
+                    </div>
+                    <div class="card-medium accent-border-blue">
+                        <h4 class="card-subtitle"><i class="fas fa-bullseye"></i> Our Mission</h4>
+                        <p>To provide **innovative and reliable services** across multiple platforms that empower people and businesses to achieve success.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page 2: Our Services (Overview) -->
+        <section class="services-overview-section bg-dark-alt" id="services">
+            <div class="container">
+                <h2 class="section-header">Our Diverse Portfolio</h2>
+                <p class="section-description">We combine traditional services like logistics and insurance with modern solutions like software development and digital marketing. This makes us a one-stop partner for clients worldwide.</p>
+
+                <div class="service-grid">
+                    <div class="service-card">
+                        <img src="https://picsum.photos/seed/truck-dispatch-service/600/400.jpg" alt="Truck Dispatching" class="service-image">
+                        <div class="service-content">
+                            <h4 class="card-title">Truck Dispatching</h4>
+                            <p>Efficient and seamless dispatch services for transportation businesses. We connect drivers with optimal loads, manage scheduling, and provide 24/7 support to maximize profitability.</p>
+                            <a href="truck-dispatch.html" class="learn-more-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <img src="https://picsum.photos/seed/medicare-healthcare/600/400.jpg" alt="Medicare" class="service-image">
+                        <div class="service-content">
+                            <h4 class="card-title">Medicare</h4>
+                            <p>Expert guidance to help individuals access the right healthcare benefits. We simplify the complex Medicare system to ensure you get the coverage you need.</p>
+                            <a href="medicare.html" class="learn-more-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <img src="https://picsum.photos/seed/home-auto-insurance/600/400.jpg" alt="Home & Auto Insurance" class="service-image">
+                        <div class="service-content">
+                            <h4 class="card-title">Home & Auto Insurance</h4>
+                            <p>Comprehensive coverage solutions that protect your valuable assets. We work with top providers to find policies that match your specific needs and budget.</p>
+                            <a href="home&autoinsurance.html" class="learn-more-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <img src="https://picsum.photos/seed/web-development-coding/600/400.jpg" alt="Full-Stack Development" class="service-image">
+                        <div class="service-content">
+                            <h4 class="card-title">Full-Stack Development</h4>
+                            <p>End-to-end web and app development tailored to client needs. From concept to deployment, we create scalable, secure, and user-friendly digital solutions.</p>
+                            <a href="Web Development.html" class="learn-more-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <img src="https://picsum.photos/seed/social-media-marketing/600/400.jpg" alt="Social Media Marketing" class="service-image">
+                        <div class="service-content">
+                            <h4 class="card-title">Social Media Marketing</h4>
+                            <p>Digital growth through creative and results-driven campaigns. We build brand awareness, engage audiences, and drive conversions across all social platforms.</p>
+                            <a href="social media marketing.html" class="learn-more-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Added 3 new service cards -->
+                  
+                    
+                    <div class="service-card">
+                        <img src="https://picsum.photos/seed/digital-marketing-seo/600/400.jpg" alt="SEO & Digital Marketing" class="service-image">
+                        <div class="service-content">
+                            <h4 class="card-title">SEO & Digital Marketing</h4>
+                            <p>Boost your online presence with our comprehensive SEO and digital marketing strategies. We help businesses rank higher, attract qualified traffic, and convert visitors into customers.</p>
+                            <a href="#" class="learn-more-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+        </section>
+                <p  style="text-align: center;">We believe in quality, transparency, and trust in every service we deliver.</p>
+
+        <!-- Page 3: Truck Dispatching & Medicare (Detailed) -->
+        <section class="detail-section" id="dispatch-medicare">
+            <div class="container">
+                <h2 class="section-header">Logistics and Healthcare Support</h2>
+
+                <div class="detail-card-group">
+                    <div class="detail-card truck-card">
+                        <h3 class="card-title"><i class="fas fa-truck"></i> Truck Dispatching</h3>
+                        <p>Our dispatching service ensures smooth logistics management. We connect drivers with loads, optimize routes, manage schedules, and provide 24/7 support to trucking companies. Our dispatchers are trained to reduce downtime and maximize profitability for our clients.</p>
+                        <h4 class="detail-subtitle">Key Features:</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> Reliable load booking</li>
+                            <li><i class="fas fa-check-circle"></i> 24/7 customer support</li>
+                            <li><i class="fas fa-check-circle"></i> Route optimization</li>
+                            <li><i class="fas fa-check-circle"></i> Paperwork & compliance handling</li>
+                        </ul>
+                    </div>
+
+                    <div class="detail-card medicare-card">
+                        <h3 class="card-title"><i class="fas fa-user-md"></i> Medicare Assistance</h3>
+                        <p>Healthcare is one of the most important aspects of life. EK-Alpha Solutions guides clients through Medicare plans, making it easier to choose the right coverage. Our goal is to provide clarity, trust, and peace of mind in healthcare decisions.</p>
+                        <div class="medicare-info">
+                            <p class="text-sm">Expert guidance for peace of mind.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page 4: Insurance & Technology Solutions -->
+        <section class="detail-section bg-dark-alt" id="tech-insurance">
+            <div class="container">
+                <h2 class="section-header">Protection and Digital Growth</h2>
+
+                <div class="detail-card-group">
+                     <div class="detail-card insurance-card">
+                        <h3 class="card-title"><i class="fas fa-car-side"></i> Home & Auto Insurance</h3>
+                        <p>Life is full of uncertainties, and protecting your home and vehicles is essential. EK-Alpha Solutions offers trusted insurance solutions to safeguard your most valuable assets. With personalized advice, we ensure our clients always receive the best protection possible.</p>
+                    </div>
+
+                    <div class="detail-card dev-card">
+                        <h3 class="card-title"><i class="fas fa-laptop-code"></i> Full-Stack Development</h3>
+                        <p>In today's digital world, businesses need powerful websites and applications. Our full-stack development team creates scalable, secure, and user-friendly solutions that support growth.</p>
+                        <h4 class="detail-subtitle">Services include:</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-arrow-right"></i> Frontend & backend development</li>
+                            <li><i class="fas fa-arrow-right"></i> Custom websites and applications</li>
+                            <li><i class="fas fa-arrow-right"></i> Database design & management</li>
+                            <li><i class="fas fa-arrow-right"></i> API integration and automation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page 5: Social Media Marketing & Values -->
+        <section class="content-section" id="marketing-values">
+            <div class="container">
+
+                <div class="grid-2-col">
+                    <!-- Social Media Marketing -->
+                    <div class="card-large">
+                        <h2 class="section-header text-left"><i class="fas fa-share-alt-square"></i> Social Media Marketing</h2>
+                        <p>In the age of digital interaction, brand visibility is everything. Our social media marketing team crafts creative campaigns that increase engagement, attract customers, and drive sales.</p>
+                        <h4 class="detail-subtitle">What we do:</h4>
+                        <ul class="feature-list large-list">
+                            <li>Social media strategy & planning</li>
+                            <li>Paid campaigns and organic growth</li>
+                            <li>Content creation & management</li>
+                            <li>Analytics and performance tracking</li>
+                        </ul>
+                    </div>
+
+                    <!-- Core Values -->
+                    <div class="card-large values-card">
+                        <h2 class="section-header text-left"><i class="fas fa-gem"></i> Our Core Values</h2>
+                        <div class="value-item">
+                            <span class="value-title">Trust:</span> Building strong and reliable partnerships.
+                        </div>
+                        <div class="value-item">
+                            <span class="value-title">Innovation:</span> Staying ahead with modern solutions.
+                        </div>
+                        <div class="value-item">
+                            <span class="value-title">Diversity:</span> Offering services across different industries and platforms.
+                        </div>
+                        <div class="value-item">
+                            <span class="value-title">Excellence:</span> Delivering quality at every step.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page 6: Leadership, Team & Future Goals -->
+        <section class="team-goals-section bg-dark-alt" id="team-goals">
+            <div class="container">
+                <h2 class="section-header">Our Leadership & Team</h2>
+                
+                <div class="leadership-section">
+                    <div class="leadership-card">
+                        <div class="leader-photo">
+                            <img src="https://picsum.photos/seed/ceo/600/600.jpg" alt="CEO Abdullah Saeed" class="leader-img">
+                        </div>
+                        <div class="leader-info">
+                            <h3>CEO</h3>
+                            <p class="leader-name">Abdullah Saeed</p>
+                            <p class="leader-desc">With over 15 years of experience in logistics and business management, Abdullah leads our company with vision and strategic direction. His focus on innovation and operational excellence has been instrumental in establishing EK-Alpha Solutions as an industry leader.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="leadership-card">
+                        <div class="leader-photo">
+                            <img src="https://picsum.photos/seed/founder/600/600.jpg" alt="Founder Muhammad Ijaz" class="leader-img">
+                        </div>
+                        <div class="leader-info">
+                            <h3>Founder</h3>
+                            <p class="leader-name">Muhammad Ijaz</p>
+                            <p class="leader-desc">As the founder of EK-Alpha Solutions, Muhammad brings entrepreneurial spirit and deep industry knowledge. His commitment to customer satisfaction and quality service has shaped our company culture from day one.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-section">
+                    <h3 class="team-title">Our Dedicated Team</h3>
+                    <div class="team-grid">
+                        <div class="team-member">
+                            <div class="member-photo">
+                                <img src="https://picsum.photos/seed/team1/400/400.jpg" alt="Imran Haider" class="member-img">
+                            </div>
+                            <h4>Imran Haider</h4>
+                            <p class="member-role">Operations Manager</p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <div class="member-photo">
+                                <img src="https://picsum.photos/seed/team2/400/400.jpg" alt="Aqsa Ijaz" class="member-img">
+                            </div>
+                            <h4>Aqsa Ijaz</h4>
+                            <p class="member-role">Client Relations</p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <div class="member-photo">
+                                <img src="https://picsum.photos/seed/team3/400/400.jpg" alt="Abdulrehman" class="member-img">
+                            </div>
+                            <h4>Abdulrehman</h4>
+                            <p class="member-role">Logistics Coordinator</p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <div class="member-photo">
+                                <img src="https://picsum.photos/seed/team4/400/400.jpg" alt="Fatima Saeed" class="member-img">
+                            </div>
+                            <h4>Fatima Saeed</h4>
+                            <p class="member-role">Quality Assurance</p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <div class="member-photo">
+                                <img src="https://picsum.photos/seed/team5/400/400.jpg" alt="Sadaf Javed" class="member-img">
+                            </div>
+                            <h4>Sadaf Javed</h4>
+                            <p class="member-role">Marketing Specialist</p>
+                        </div>
+                        
+                        <!-- Added 3 more team members -->
+                        <div class="team-member">
+                            <div class="member-photo">
+                                <img src="https://picsum.photos/seed/team6/400/400.jpg" alt="Ahmed Khan" class="member-img">
+                            </div>
+                            <h4>Ahmed Khan</h4>
+                            <p class="member-role">Senior Developer</p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <div class="member-photo">
+                                <img src="https://picsum.photos/seed/team7/400/400.jpg" alt="Sara Ahmed" class="member-img">
+                            </div>
+                            <h4>Sara Ahmed</h4>
+                            <p class="member-role">Insurance Advisor</p>
+                        </div>
+                        
+                        <div class="team-member">
+                            <div class="member-photo">
+                                <img src="https://picsum.photos/seed/team8/400/400.jpg" alt="Usman Malik" class="member-img">
+                            </div>
+                            <h4>Usman Malik</h4>
+                            <p class="member-role">Dispatch Specialist</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="future-goals">
+                    <h3 class="goals-title">Future Goals</h3>
+                    <ul class="goal-list">
+                        <li><i class="fas fa-rocket red-icon"></i> Expand dispatching services across more regions</li>
+                        <li><i class="fas fa-shield-alt blue-icon"></i> Build innovative healthcare and insurance platforms</li>
+                        <li><i class="fas fa-globe red-icon"></i> Grow our digital services globally</li>
+                        <li><i class="fas fa-handshake blue-icon"></i> Strengthen client relationships through trust and transparency</li>
+                    </ul>
+                </div>
+                
+                <p class="final-statement text-center mt-10">At EK-Alpha Solutions, we don't just provide services—we create experiences, partnerships, and growth opportunities.</p>
+            </div>
+        </section>
+                   
+    <!-- MAIN CONTENT END -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            
+            <div class="footer-contact">
+                <a href="#"><div class="nav-title-header" style="background: none;height: fit-content;width: max-content;">
+        
+        <h1 class="nav-main-title" >EK-ALPHA SOLUTIONS</h1>
+    </div></a>
+                <p class="description" style="padding-top: 100px;">Providing comprehensive, trusted solutions for logistics, security, and personal services.</p>
+                <div class="contact-item">
+                    <i class="fas fa-phone red-icon"></i>
+                    <a href="tel:+16473611093">+1 (647) 361-1093</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope red-icon"></i>
+                    <a href="mailto:info@ekalpha.com">info@ekalpha.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt red-icon"></i>
+                    <p>3524 Silverside Rd Ste 12297 ST.<br>PETERSBURG, FL, US 33701</p>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="services.html">Services & Pricing</a></li>
+                    <li><a href="portfolio.html">Our Portfolio</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Services</h4>
+                <ul>
+                   <li><a href="truck-dispatch.html">Truck Dispatch Services</a></li>
+                    <li><a href="medicare.html">Medicare</a></li>
+                    <li><a href="home&autoinsurance.html">Home&Auto Insurance</a></li>
+                    <li><a href="Web Development.html">Web Development</a></li>
+                    <li><a href="social media marketing.html">Social Media Marketing</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#">How to Get Started</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container bottom-content">
+                <p>&copy; Copyright 2024 EK-Alpha Solutions. All rights reserved.</p>
+                <div class="nav-right">
+                    <div class="social-icons">
+                        <a href="https://web.facebook.com/profile.php?id=61578832953435" target="_blank" rel="noopener">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/saflareadsmarketing/" target="_blank" rel="noopener">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/sa-flare-ads-marketing-418862377/" target="_blank" rel="noopener">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@SAFlareAdsMarketing" target="_blank" rel="noopener">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://vm.tiktok.com/ZSSkMBK7F/" target="_blank" rel="noopener">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float">
+        <!-- Updated WhatsApp button color to exact green color from blueprint -->
+        <a href="https://wa.me/+1 (647) 361-1093?text=Hi! I'm interested in getting an insurance quote." target="_blank" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i>
+            <span class="whatsapp-tooltip">Chat with us on WhatsApp</span>
+        </a>
+    </div>
+
+    <script src="app.js"></script> 
+</body>
+</html>
